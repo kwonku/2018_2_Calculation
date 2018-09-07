@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head><title>체지방 계산기</title>
+<style >
+	body{text-align: center;}
+	#blank{margin:auto; text-align: center;}
+	#output{margin:auto; text-align: center;}
+	#explain{margin:auto; text-align: center;}
+</style>
+</head>
+<body>
+	
+	<div id="blank" style="height: 150px;"></div>
+
+	<input type="text" style="text-align:center;" placeholder="키 (꼭 'm' 단위로 입력하세요!)" size="30" id="myHeight">m<br><br>
+
+	<input type="text" style="text-align:center;"placeholder="몸무게" size="30" id="myWeight">kg<br><br>
+
+	<button id="but" >체지방</button><br><br>
+
+	<div id="output" style="width: 400px; height: 400px; background: brown; color: white;
+	text-align: center; line-height: 400px;">당신의 체지방은?!</div><br>
+
+	<div id="explain" style="width: 400px; height: 200px; color: gray">
+		*산출된 값이 18.5 이하면 저체중,<br>
+		18.5~23은 정상, 23~25는 과체중, 25~30은 비만,<br>
+		30이상은 고도비만으로 나누어진다.</div>
+
+	<script type="text/javascript">
+
+		but.onclick = function(){
+			
+			var che = myWeight.value / (myHeight.value * myHeight.value);
+			var finalOutput = "당신의 체지방은" + che + "입니다.";
+			
+			output.innerHTML = finalOutput
+		}
+		
+	</script>
+</body>
+</html>
